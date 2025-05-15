@@ -16,7 +16,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/passkey")
 
         const credential = mongoose.model("credential", {}, "bulkmail");
 
-        return credential.find()
+        return credential.find();
     })
     .then((data) => {
         if (data.length === 0) throw new Error("No credentials found");
